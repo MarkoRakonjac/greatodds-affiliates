@@ -1,0 +1,38 @@
+.start-earning {
+  background-color: #5a5a5a;
+  padding: 40px 0;
+  text-align: center;
+  .start-earning-title {
+    color: $primary-font-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .start-earning-btn {
+    color: $primary-font-color;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    transition: .3s;
+    &:hover {
+      border: 1px solid $secondary-background;
+      background-color: $secondary-background;
+    }
+  }
+}
+
+
+@media (min-width:992px) {
+  .start-earning {
+    padding: 60px 0;
+  }
+  .start-earning .start-earning-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .start-earning .start-earning-btn {
+    font-size: 24px;
+    padding: 10px 24px;
+  }
+}

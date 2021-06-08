@@ -1,0 +1,292 @@
+.about-us {
+  background-color: $primary-background;
+  padding: 40px 0;
+  .about-us-content {
+    // text-align: center;
+    padding: 0 10px;
+    .about-us-title {
+      color: $primary-font-color;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .about-us-text {
+      color: $primary-font-color;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.how-it-works {
+  background-color: $primary-background;
+  padding: 40px 10px;
+  .how-it-works-title {
+    color: $primary-font-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .how-it-works-steps {
+    display: flex;
+    flex-direction: column;
+    .step {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 20px;
+      background-color: #4a4a4a;
+      margin-bottom: 20px;
+      z-index: 0;
+      min-height: 200px;
+      .step-num {
+        position: absolute;
+        font-size: 150px;
+        // top: 0;
+        // left: 0;
+        line-height: 1;
+        font-weight: 700;
+        color: #585858;
+        z-index: -1;
+      }
+      .step-text {
+        color: $primary-font-color;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .how-it-works-text {
+    color: $primary-font-color;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.how-we-do-it {
+  background-color: $primary-background;
+  padding: 40px 10px;
+  .how-we-do-it-title {
+    color: $primary-font-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+      .item-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #4a4a4a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        img {
+          width: 50px;
+        }
+      }
+      .item-text {
+        color: $primary-font-color;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+    }
+    
+  }
+}
+
+.earn-graph {
+  background-color: $primary-background;
+  padding:0;
+  padding-top: 40px;
+  .earn-graph-title {
+    color: $primary-font-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  img {
+    width: 100%; 
+    margin-bottom: -1px;
+  }
+}
+
+.earning-info {
+  background-color: $secondary-background;
+  padding: 40px 0;
+  .earning-info-title {
+    color: $primary-font-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    li {
+    color: $primary-font-color;;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    }
+  }
+  .earning-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .card {
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px 40px;
+      margin: 0;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      list-style-type: none;
+      border: none;
+      border-radius: 0;
+      background: rgb(74,74,74);
+      background: linear-gradient(350deg, rgba(74,74,74,1) 0%, rgba(48,48,48,1) 100%);
+      &:first-child {
+        margin-left: 15px;
+      }
+      &:last-child {
+        border-right: 15px solid $secondary-background;
+      }
+      li {
+        color: $primary-font-color;
+        margin-bottom: 0;
+        // font-weight: 700;
+        &:nth-child(even) {
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          color: $highlight-font-color;
+          font-weight: 700;
+          font-size: 18px;
+          border-bottom: 1px solid rgba(197, 195, 195, 0.13);
+          &:last-child {
+            margin-bottom: 0;
+            padding: 0;
+            border-bottom: none;
+          }
+          
+        }
+      }
+    }
+  }
+  .cards-caption {
+    color: $primary-font-color;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width:768px) {
+  .how-it-works .how-it-works-steps {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .how-it-works .how-it-works-steps .step {
+    flex: 1 0 48%;
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+  .how-we-do-it .items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .how-we-do-it .items .item {
+    flex: 1 0 50%;
+  }
+  .how-we-do-it .how-we-do-it-title {
+    margin-bottom: 40px;
+  }
+  .earning-info .earning-cards .card {
+    padding: 20px 60px;
+  }
+}
+
+@media (min-width:992px) {
+  .about-us, .how-it-works, .how-we-do-it, .earning-info{
+    padding: 60px 0;
+  }
+  .earn-graph {
+    padding-top: 60px;
+  }
+  .about-us .about-us-content .about-us-title {
+    padding-left: 20px;
+    font-size: 28px;
+  }
+  .how-it-works .how-it-works-title {
+    padding-left: 20px;
+    font-size: 28px;
+  }
+  .how-it-works .how-it-works-steps .step {
+    min-height: 320px;
+    padding: 40px;
+  }
+  .how-it-works .how-it-works-steps .step .step-text {
+    font-size: 24px;
+  }
+  .how-it-works .how-it-works-steps .step .step-num {
+    font-size: 200px;
+  }
+  .how-we-do-it .how-we-do-it-title {
+    font-size: 28px;
+  } 
+  .how-we-do-it .items .item {
+    flex: 1 0 20%;
+    margin: 0 20px;
+    justify-content: flex-start;
+  }
+  .how-we-do-it .items .item .item-text {
+    text-align: center;
+  }
+  .earn-graph .earn-graph-title {
+    font-size: 28px;
+  }
+  .earning-info .earning-info-title {
+    font-size: 28px;
+  }
+  .earning-info .earning-cards {
+    justify-content: center;
+  }
+  .earning-info .earning-cards .card {
+    padding: 20px 30px;
+  }
+  .earning-info ul {
+    padding: 60px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .how-we-do-it .items .item .item-icon {
+    width: 130px;
+    height: 130px;
+  }
+  .how-we-do-it .items .item .item-icon img {
+    width: 60px;
+  }
+  .earning-info .earning-cards .card {
+    padding: 20px 50px;
+  }
+}
